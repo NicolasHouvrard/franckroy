@@ -1,1 +1,236 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root{
+    --font-family: 'Roboto', sans-serif;
+    --primary:#778beb;
+    --secondary:#5aaaf5;
+    --accent:#ea8685;
+    --lightgray:#ddd; 
+    --text-regular:#444;
+}
+
+body {
+
+    font-family: var(--font-family);
+    color:var(--text-regular);
+
+}
+
+// layout 
+.container {
+    max-width: 2000px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+.d-flex{
+    display: flex;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.flex-columm{
+    flex-direction: column;
+}
+
+.flex-justify-content-center { 
+    justify-content: center;
+}
+
+.flex-justify-content-between {
+    justify-content: space-between;
+}
+
+
+.flex-align-items-center{
+    align-items: center;
+}
+
+
+.flex-align-items-between{
+    align-items: space-between;
+
+}
+
+
+.flex-fill {
+    flex: 1 1 auto;
+}
+.flex-50{
+    flex: 1 1 50%;
+}
+
+.pr-10{
+    padding-right: 10px;
+}
+
+.pl-10{
+    padding-left: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+
+// util 
+
+.p-10 {
+    padding: 10px;
+}
+.p-20 {
+    padding: 20px;
+}
+.m-10{
+    margin: 10px;
+
+}
+.m-20 {
+    margin: 20px;
+}
+
+// theme 
+.action{
+    li{
+        &:hover{
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        transition: all 0.4s;
+    }
+}
+
+.list-primary{
+    li {
+        padding: 10px 15px;
+        border: 1px solid var(--lightgray);
+        border-top: 0;
+        
+    }
+    li:first-child {
+        border-top: 1px solid var(--lightgray);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+    li:last-child {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: white;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+    &-primary{
+        background-color: var(--primary);
+        color: white;
+        &:hover {
+            background-color: var(--secondary);
+        }
+        transition: background-color 0.4s;
+    }
+    &-secondary{
+        background-color: red;
+        color: white;
+        &:hover {
+            background-color: var(--secondary);
+        }
+        transition: background-color 0.4s;
+    }
+}
+.badge {
+    background-color: var(--secondary);
+    border-radius: 3px;
+    padding: 2px 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+.input {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 8px 15px;
+
+
+
+}
+
+.form-group {
+    max-width: 800px;
+    .label {
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.ng-valid {
+    border-color: green;
+}
+
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+button {margin: 5px;}
+//debug
+.d1 {
+    border: 1px solid red;
+
+}
+
+.d2 {
+    border: 1px solid green;}
+
+.active{
+    background: var(--secondary);
+    border-radius: 3px;
+    color: white;
+    font-weight: 500;
+}
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    }
+
+hr {
+    margin: 20px 0px;
+    border-top: 1pw solid  #ddd;
+
+}
+
+.w-100 {
+    width: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

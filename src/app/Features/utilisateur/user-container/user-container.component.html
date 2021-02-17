@@ -1,0 +1,23 @@
+<div class="d1 d-flex  flex-columm container flex-fill">
+<h3 >Gestion des utilisateurs</h3>
+
+
+
+ <!-- (changeUser)="selectUser($event)" -->
+    <app-user-list 
+ 
+    [users]="users$ | async"
+    [selectedUser]="selectedUser"
+    class="d-flex  flex-50 "
+    
+    ></app-user-list>
+
+</div>
+
+    
+     
+   
+      
+   
+  
+  

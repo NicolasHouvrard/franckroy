@@ -1,0 +1,11 @@
+
+
+<H1>HOMEPAGE</H1>
+
+<div class="w-100 d-flex flex-row flex-justify-center">
+    <button (click)="state = 'normal'" class="btn btn-primary">normal</button>
+    <button (click)="state = 'wild'"class="btn btn-primary">wild</button>
+</div>
+<div class="w-100 d-flex flex-row flex-justify-center">
+    <div [@square]="state" class="square"></div>
+</div>

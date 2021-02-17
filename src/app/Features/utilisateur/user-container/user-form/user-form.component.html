@@ -1,0 +1,31 @@
+<div class="container flex-50  p-10" >
+    <h3>Ajout d'un utilisateur</h3>
+<form (ngSubmit)="submit()" [formGroup]="form">
+   
+    <div class="d-flex flex-columm form-group">
+        <label >Nom</label>
+        <input formControlName="nom" type="text"  >
+        <div *ngIf="nom.errors && nom.touched">
+            <p class="error" *ngIf="nom.errors.notPaul">le nom Paul n'esst pas autorisé</p>
+            <p class="error" *ngIf="nom.errors.required">Vous devez rentrer un nom</p>
+        </div>
+    </div>
+    <div class="d-flex flex-columm form-group">
+        <label >Email</label>
+        <input formControlName="email" type="email" >
+    </div>
+    <div class="d-flex flex-columm form-group">
+        <label >Mot de passe</label>
+        <input formControlName="password" type="password" >
+        <div *ngIf="password.errors && password.touched">
+            <p class="error" *ngIf="password.errors.noMatching">les mots de pass sont différents</p>
+            <p class="error" *ngIf="password.errors.required">Vous devez rentrer un mot de passe</p>
+        </div>
+    </div>
+    <div class="d-flex flex-columm form-group">
+        <label >Confirmation</label>
+        <input #confirmation type="password">
+    </div>
+    <button  class="btn btn-primary" style="margin-top: 20px;">Valider</button>
+</form>
+</div>

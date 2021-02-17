@@ -1,0 +1,17 @@
+<div class=" flex-50 flex-columm p-10 d1" >
+    <h3 class="mb-20">Liste des utilisateurs</h3>
+    <button class="btn btn-primary" routerLink="new">ajouter  un user</button>
+        <ul class="list-primary m-10" *ngIf="users">
+
+             <li 
+             [routerLink]="[user.id]"
+             routerLinkActive="active"
+             *ngFor="let user of users; let index = index">
+                {{user?.username}}   
+                {{user?.id}}  
+             </li>
+    
+        </ul>
+</div>
+<router-outlet ></router-outlet>
+

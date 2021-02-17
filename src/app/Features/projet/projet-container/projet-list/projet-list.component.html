@@ -1,0 +1,28 @@
+<div class="mb-10"
+fxFill
+
+fxLayoutGap='10px'>
+<h3 class="mb-20">Liste des projets</h3>
+
+<button class="btn btn-primary" routerLink="ajouter">ajouter  un projet</button>
+
+
+<input class="mb-20 w-100" type="text" 
+[(ngModel)]="search" placeholder="rechercher un projet">
+<ul class="list-primary action mb-20" *ngIf="projets">
+    <li 
+    [routerLink]="[index]"
+    routerLinkActive="active"
+    
+     
+     *ngFor="let projet of projets | projetfilter: search; let index = index"
+     ><div fxFlex="100%">
+     {{projet.id}} 
+     {{projet.name}}   </div>
+     <button fxLayoutAlign="end end">editer</button><button (click)="projetDelete(index)" fxLayoutAlign="end end">delete</button>
+    </li>
+  
+</ul>
+
+
+</div>
